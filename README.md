@@ -1,17 +1,49 @@
-# Contracts REST API
+##🧾 Overview
+This is a RESTful API for managing contracts, jobs, and payments between clients and contractors. Built using Fastify, TypeScript, TypeORM, and PostgreSQL, the system supports authentication, job payments, contract tracking, and reporting.
 
-A robust RESTful API built with **TypeScript**, **Fastify**, and **TypeORM** for managing contracts between clients and contractors. This API simulates a contract management platform where clients can create contracts with contractors, who complete jobs and get paid.
+##🧩 Technologies Used
+- **Fastify: High-performance HTTP framework
 
-## 🚀 Features
+- **TypeORM: ORM for PostgreSQL
 
-- **Authentication & Authorization**: JWT-based authentication with secure password hashing
-- **User Management**: Support for both Client and Contractor user types
-- **Contract Management**: Create and manage contracts with different statuses
-- **Job Management**: Create jobs, track payments, and manage job status
-- **Payment System**: Secure payment processing with balance management
-- **Analytics**: Best profession and client analytics with date range filtering
-- **Database**: PostgreSQL with TypeORM for robust data management
-- **Type Safety**: Full TypeScript implementation with type definitions
+- **TypeScript: Type-safe JavaScript
+
+- **JWT Authentication: Secure user sessions
+
+- **Swagger (OpenAPI): Auto-generated API documentation
+
+- **Vitest/Jest: Unit/integration testing support (optional)
+
+- **PostgreSQL: Relational database
+
+
+
+## 📘 Main Features
+🔐 Authentication
+- **POST /signup: Register new user
+
+- **POST /login: Authenticate and receive JWT token
+
+- **GET /profile: Get logged-in user profile
+
+**💼 Contracts
+- **GET /contracts/:id: Get contract by ID (if owned)
+
+- **GET /contracts: Filter contracts by status
+
+🧾 Jobs
+- **GET /jobs: All jobs for authenticated user
+
+- **GET /jobs/unpaid: Unpaid jobs from active contracts
+
+- **POST /jobs/:id/pay: Pay for a job (client only)
+
+- **GET /jobs/best-profession: Top-earning profession in date range
+
+- **GET /jobs/best-clients: Top clients by total paid in date range
+
+💰 Balance
+- **POST /balances/deposit/:userId: Deposit funds (up to 25% of unpaid jobs)
 
 ## 🏗️ Architecture
 
@@ -253,24 +285,4 @@ Content-Type: application/json
 - `npm start`: Start the development server with hot reload
 
 
-
-## 🤝 Contributing
-
-Pull requests are welcome! For major changes, please open an issue first.
-
-## 📝 License
-
-This project is licensed under the MIS License.
-
-
-## 🔮 Future Enhancements
-
-- [ ] Google Sheets integration for transaction logging
-- [ ] Swagger/OpenAPI documentation
-- [ ] Unit and integration tests
-- [ ] CLI client for API interaction
-- [ ] Database seeding with dummy data
-- [ ] Rate limiting and API throttling
-- [ ] Email notifications
-- [ ] File upload for contract documents
 
