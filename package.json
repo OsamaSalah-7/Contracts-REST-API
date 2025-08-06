@@ -1,0 +1,31 @@
+{
+  "name": "contract-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@types/node": "^22.15.3",
+    "bcryptjs": "^3.0.2",
+    "contract-api": "file:",
+    "fastify": "^5.3.2",
+    "fastify-swagger": "^5.1.1",
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.15.6",
+    "reflect-metadata": "^0.2.2",
+    "ts-node": "^10.9.2",
+    "typeorm": "^0.3.22",
+    "typescript": "^5.8.3"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "@types/jsonwebtoken": "^9.0.9",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.3.2"
+  }
+}
