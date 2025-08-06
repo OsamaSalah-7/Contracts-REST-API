@@ -1,7 +1,7 @@
-##🧾 Overview
+## 🧾 Overview
 This is a RESTful API for managing contracts, jobs, and payments between clients and contractors. Built using Fastify, TypeScript, TypeORM, and PostgreSQL, the system supports authentication, job payments, contract tracking, and reporting.
 
-##🧩 Technologies Used
+## 🧩 Technologies Used
 - **Fastify: High-performance HTTP framework
 
 - **TypeORM: ORM for PostgreSQL
@@ -26,12 +26,12 @@ This is a RESTful API for managing contracts, jobs, and payments between clients
 
 - **GET /profile: Get logged-in user profile
 
-**💼 Contracts
+## 💼 Contracts
 - **GET /contracts/:id: Get contract by ID (if owned)
 
 - **GET /contracts: Filter contracts by status
 
-🧾 Jobs
+## 🧾 Jobs
 - **GET /jobs: All jobs for authenticated user
 
 - **GET /jobs/unpaid: Unpaid jobs from active contracts
@@ -42,7 +42,7 @@ This is a RESTful API for managing contracts, jobs, and payments between clients
 
 - **GET /jobs/best-clients: Top clients by total paid in date range
 
-💰 Balance
+## 💰 Balance
 - **POST /balances/deposit/:userId: Deposit funds (up to 25% of unpaid jobs)
 
 ## 🏗️ Architecture
